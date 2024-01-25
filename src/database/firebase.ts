@@ -1,6 +1,8 @@
 import { initializeApp } from 'firebase/app'
 import * as firestore from 'firebase/firestore'
 
+
+
 const firebaseConfig = {
   apiKey: process.env.API_KEY,
   authDomain: process.env.AUTH_DOMAIN,
@@ -14,5 +16,7 @@ const firebaseConfig = {
 const firebase = initializeApp(firebaseConfig)
 
 export const db = firestore.getFirestore(firebase)
+
+console.log('Firebase conectado!')
 
 export { firestore }
